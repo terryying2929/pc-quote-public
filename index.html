@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>电脑配置报价</title>
+    <link rel="stylesheet" href="./styles.css?v=0.3.4" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>电脑配置报价</h1>
+        <p id="status">正在读取公开报价...</p>
+      </div>
+      <div class="summary">
+        <span id="quoteUpdated">报价更新时间：-</span>
+        <strong id="cartTotal">¥0</strong>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="search-section">
+        <div class="filters">
+          <label>
+            关键词
+            <input id="q" type="search" placeholder="例如 12400、3060、金士顿32g" />
+          </label>
+          <label>
+            分类
+            <select id="category">
+              <option value="">全部</option>
+            </select>
+          </label>
+          <label>
+            状态
+            <select id="statusFilter">
+              <option value="">全部</option>
+              <option value="可咨询">可咨询</option>
+              <option value="请询价">请询价</option>
+              <option value="请咨询">请咨询</option>
+            </select>
+          </label>
+        </div>
+        <div id="products" class="products"></div>
+      </section>
+
+      <aside class="quote-panel">
+        <h2>配置单</h2>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="totals">
+          <span>不含税总价</span>
+          <strong id="quoteTotal">¥0</strong>
+        </div>
+        <button id="copyBtn" type="button">复制配置</button>
+        <p id="notice" class="notice">页面价格仅供参考，库存与成交价以电话/微信确认为准；报价默认不含税，如需开票请另询。</p>
+      </aside>
+    </main>
+
+    <script src="./app.js?v=0.3.4"></script>
+  </body>
+</html>
